@@ -7,7 +7,7 @@ is.bool = (a) => typeof a === 'boolean'
 is.undef = (a) => typeof a === 'undefined'
 is.def = (a) => typeof a !== 'undefined'
 is.arr = (a) => Array.isArray(a)
-is.obj = (a) => typeof a === 'object'
+is.obj = (a) => typeof a === 'object' && !Array.isArray(a)
 is.fun = (a) => typeof a === 'function'
 is.truthy = (a) => Boolean(a)
 is.falsy = (a) => !Boolean(a)
