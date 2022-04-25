@@ -13,5 +13,5 @@ const last = (a) => {
 }
 
 const kiss = (a) => {
-  return [first(a), last(a)]
+  return [last(a), first(a)]
 }
