@@ -13,23 +13,24 @@ const neptune = 164.79132
 
 const dogYears = (a, b) => {
   b = b / earthData.seconds
+  let res = b
 
   if (a === 'earth') {
-    return b
+    res = b
   } else if (a === 'mercury') {
-    return b * mercury
+    res = b * mercury
   } else if (a === 'venus') {
-    return b * venus
+    res = b * venus
   } else if (a === 'mars') {
-    return b * mars
+    res = b * mars
   } else if (a === 'jupiter') {
-    return b * jupiter
+    res = b * jupiter
   } else if (a === 'saturn') {
-    return b * saturn
+    res = b * saturn
   } else if (a === 'uranus') {
-    return b * uranus
+    res = b * uranus
   } else if (a === 'neptune') {
-    return b * neptune
+    res = b * neptune
   }
-  return b
+  return b * 7
 }
