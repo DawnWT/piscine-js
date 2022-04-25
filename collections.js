@@ -59,6 +59,7 @@ const strToObj = (a) => {
 const superTypeOf = (a) => {
   const t = typeof a
   if (a === null) return 'null'
+  if (t === 'undefined') return t
   if (t !== "object") return (t[0].toUpperCase() + t.substring(1))
   if (Array.isArray(a)) return 'Array'
   if (a instanceof Map) return 'Map'
