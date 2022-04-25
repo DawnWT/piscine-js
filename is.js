@@ -1,5 +1,3 @@
-const is = {}
-
 is.num = (a) => typeof a === 'number'
 is.nan = (a) => Number.isNaN(a)
 is.str = (a) => typeof a === 'string'
