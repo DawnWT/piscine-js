@@ -32,5 +32,5 @@ const dogYears = (a, b) => {
   } else if (a === 'neptune') {
     res = b * neptune
   }
-  return Math.round(b * 7)
+  return Math.round(b * 7 * 100) / 100
 }
