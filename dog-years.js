@@ -18,19 +18,19 @@ const dogYears = (a, b) => {
   if (a === 'earth') {
     res = b
   } else if (a === 'mercury') {
-    res *= mercury
+    res /= mercury
   } else if (a === 'venus') {
-    res *= venus
+    res /= venus
   } else if (a === 'mars') {
-    res *= mars
+    res /= mars
   } else if (a === 'jupiter') {
-    res *= jupiter
+    res /= jupiter
   } else if (a === 'saturn') {
-    res *= saturn
+    res /= saturn
   } else if (a === 'uranus') {
-    res *= uranus
+    res /= uranus
   } else if (a === 'neptune') {
-    res *= neptune
+    res /= neptune
   }
 
   return Math.round(res * 100) / 100
