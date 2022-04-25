@@ -8,8 +8,8 @@ const blockChain = function (data, prev) {
     index: ++prev.index,
     hash: `${index}${prev.hash}${JSON.stringify(data)}`,
     data: data,
-    prev: prev,
-    chain: (data2) => f(data2, this)
+    prev: prev
   }
+  ret.chain = (data2) => f(data2, ret)
   return ret
 }
