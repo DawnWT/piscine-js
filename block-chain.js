@@ -7,7 +7,7 @@ const blockChain = function (data, prev) {
   // console.log(data, prev);
 
   const ret = {
-    index: ++prev.index,
+    index: prev.index + 1,
     data: data,
     prev: prev
   }
