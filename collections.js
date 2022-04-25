@@ -41,6 +41,7 @@ const objToArr = (a) => {
 const objToMap = (a) => {
   const ret = new Map()
   for (const [key, val] of Object.entries(a)) ret.set(key, val)
+  return ret
 }
 
 const arrToObj = (a) => {
