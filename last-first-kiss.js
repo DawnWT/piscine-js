@@ -7,7 +7,7 @@ const first = (a) => {
 
 const last = (a) => {
   if (a.length && a.length > 0) {
-    return a.at(-1)
+    return a[a.length - 1]
   }
   return null
 }
