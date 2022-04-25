@@ -1,10 +1,13 @@
-Object.prototype.get = (a) => {
-  if (!this) return undefined
-  return this[a] || undefined
+const sourceObject = {
+  num: 42,
+  bool: true,
+  str: 'some text',
+  log: console.log,
 }
 
-Object.prototype.get = (a, b) => {
-  if (!this) return undefined
-  this[a] = b
+const get = (a) => sourceObject[a]
+
+const set = (a, b) => {
+  sourceObject[a] = b
   return b
 }
