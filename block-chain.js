@@ -2,7 +2,7 @@ const defaultChain = { index: 0, hash: '0' }
 
 const blockChain = function (data, prev) {
   if (!prev) prev = defaultChain
-  const f = this
+  const f = blockChain
   console.log(this)
 
   const retIndex = prev.index + 1
