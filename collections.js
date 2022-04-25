@@ -6,7 +6,7 @@ const arrToSet = (a) => {
   return ret
 }
 
-const arrToStr = (a) => a.map(w => w.toString()).join()
+const arrToStr = (a) => a.map(w => w.toString()).join('')
 
 const setToArr = (a) => {
   const ret = []
@@ -17,7 +17,7 @@ const setToArr = (a) => {
 const setToStr = (a) => {
   const ret = []
   a.forEach((item) => ret.push(item))
-  return ret.join()
+  return ret.join('')
 }
 
 const strToArr = (a) => a.split('')
