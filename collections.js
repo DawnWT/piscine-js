@@ -27,7 +27,7 @@ const strToSet = (a) => new Set(strToArr(a))
 const mapToObj = (a) => {
   const ret = {}
 
-  a.forEach((key, val) => ret[key] = val)
+  a.forEach((val, key) => ret[key] = val)
 
   return ret
 }
