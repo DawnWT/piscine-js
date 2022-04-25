@@ -5,7 +5,7 @@ const blockChain = function (data, prev) {
   const f = this
 
   const ret = {
-    index: prev.index++,
+    index: ++prev.index,
     hash: `${index}${prev.hash}${JSON.stringify(data)}`,
     data: data,
     prev: prev,
