@@ -5,7 +5,7 @@ const blockChain = function (data, prev) {
   const f = this
   console.log(this)
 
-  retIndex = prev.index + 1
+  const retIndex = prev.index + 1
   const ret = {
     index: retIndex,
     data: data,
