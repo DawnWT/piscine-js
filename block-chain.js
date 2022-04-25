@@ -11,7 +11,7 @@ const blockChain = function (data, prev) {
     data: data,
     prev: prev
   }
-  ret.hash = `${ret.index}${prev.hash}${JSON.stringify(data)}`
+  ret.hash = hashCode(`${ret.index}${prev.hash}${JSON.stringify(data)}`)
   ret.chain = (data2) => f(data2, ret)
   return ret
 }
