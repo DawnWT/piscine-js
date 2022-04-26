@@ -4,8 +4,8 @@ const split = (a, b = null) => {
     const i = a.indexOf(b)
     if (i !== -1) {
       if (b) {
-        ret.push(a.slice(0, i + 1))
-        a = a.slice(i)
+        ret.push(a.slice(0, i))
+        a = a.slice(i + 1)
       } else {
         ret.push(a.slice(0, 1))
         a = a.slice(1)
