@@ -10,5 +10,5 @@ const lastIndexOf = (a, b, i = 0) => {
 }
 
 const includes = (a, b) => {
-  returnindexOf(a, b) !== -1
+  return indexOf(a, b) !== -1
 }
