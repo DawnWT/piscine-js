@@ -4,6 +4,7 @@ const get = (src, path) => {
     return src
   } else {
     src = src[pathSplit[0]]
+    if (src === undefined) return undefined
     return get(src, pathSplit.slice(1).join('.'))
   }
 }
