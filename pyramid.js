@@ -1,21 +1,18 @@
 const pyramid = (a, b, baseB = b, ret = '') => {
-  // let ret = ''
   if (b === 1) {
     const spacesCount = (baseB - 1) * a.length
-    ret = getSpaces(spacesCount) + ret
-    for (let i = 0; i < b; i++) {
-      ret = a + ret
-    }
-    ret = getSpaces(spacesCount) + ret
+    ret = getSpaces(spacesCount) + a + getSpaces(spacesCount) + ret
+    // for (let i = 0; i < b; i++) {
+    //   ret = a + ret
+    // }
 
     return ret
   } else {
     const spacesCount = (baseB - b) * a.length
-    ret = getSpaces(spacesCount) + ret
     for (let i = 0; i < (b * 2 + 1 - ((baseB - b) * 2)); i++) {
       ret = a + ret
     }
-    ret = '\n' + ret
+    ret = '\n' + getSpaces(spacesCount) + ret
 
     return pyramid(a, --b, baseB, ret)
   }
