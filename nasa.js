@@ -2,14 +2,15 @@ const nasa = (a) => {
   let ret = ''
 
   for (let i = 0; i < a; i++) {
-    if (i % 3 === 0) {
+    const j = i + 1
+    if (j % 3 === 0) {
       ret += 'NA'
     }
-    if (i % 5 === 0) {
+    if (j % 5 === 0) {
       ret += 'SA'
     }
 
-    if (i % 3 !== 0 && i % 5 !== 0) ret += ((i + 1).toString())
+    if (j % 3 !== 0 && j % 5 !== 0) ret += (j.toString())
 
     ret += ' '
   }
