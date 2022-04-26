@@ -6,6 +6,9 @@ const split = (a, b = null) => {
       if (b) {
         ret.push(a.slice(0, i))
         a = a.slice(i + b.length)
+        if (a.length === 0) {
+          ret.push('')
+        }
       } else {
         ret.push(a.slice(0, 1))
         a = a.slice(1)
