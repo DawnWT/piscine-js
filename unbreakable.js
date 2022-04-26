@@ -4,7 +4,7 @@ const split = (a, b = null) => {
     const i = a.indexOf(b)
     if (i !== -1) {
       if (b) {
-        ret.push(a.slice(0, i))
+        ret.push(a.slice(0, i + 1))
         a = a.slice(i)
       } else {
         ret.push(a.slice(0, 1))
