@@ -8,9 +8,9 @@ const multiply = (a, b) => {
 const divide = (a, b) => {
   if (a === 0) return 0
   let ret = 1
-  for (let i = 0; i < a; i++) {
-    if (multiply(i, Math.abs(b)) > a) {
-      if (b < 0) return -ret
+  for (let i = 0; i < Math.abs(a); i++) {
+    if (multiply(i, Math.abs(b)) > Math.abs(a)) {
+      if ((b < 0 || a < 0) && !(b < 0 && a < 0)) return -ret
       return ret
     } else {
       ret = i
