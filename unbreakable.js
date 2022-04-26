@@ -27,13 +27,12 @@ const split = (a, b = null) => {
 const join = (a, b = null) => {
   let ret = ''
   for (const [i, item] of a.entries()) {
+    ret += item
     if (i === a.length - 1) continue
     if (b === null) {
-      ret += (item + ', ')
-    } else if (b === '') {
-      ret += item
-    } else {
-      ret += (item + b)
+      ret += ', '
+    } else if (b !== '') {
+      ret += b
     }
   }
   return ret
