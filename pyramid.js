@@ -9,7 +9,7 @@ const pyramid = (a, b, baseB = b, ret = '') => {
     return ret
   } else {
     const spacesCount = (baseB - b) * a.length
-    for (let i = 0; i < (b * 2 - 1 - ((baseB - b) * 2)); i++) {
+    for (let i = 0; i < (b * 2 - 1); i++) {
       ret = a + ret
     }
     ret = '\n' + getSpaces(spacesCount) + ret
