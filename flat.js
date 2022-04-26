@@ -8,8 +8,9 @@ const flat = (a, b = 1) => {
       if (Array.isArray(item)) {
         ret.push(...item)
         fullFlat = false
+      } else {
+        ret.push(item)
       }
-      ret.push(item)
     }
     if (fullFlat) return ret
     return flat(ret, --b)
