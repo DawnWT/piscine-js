@@ -1,4 +1,4 @@
-const pyramid = (a, b, baseCount = b, ret) => {
+const pyramid = (a, b, baseCount = b, ret = '') => {
   // let ret = ''
   if (b === 1) {
     const spacesCount = (baseCount - 1) * a.length
