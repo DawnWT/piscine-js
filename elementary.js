@@ -1,6 +1,7 @@
 const multiply = (a, b) => {
   let ret = 0
-  for (let i = 0; i < b; i++) ret += a
+  for (let i = 0; i < Math.abs(b); i++) ret += a
+  if (b < 0) return -ret
   return ret
 }
 
