@@ -1,8 +1,9 @@
 const get = (src, path) => {
   const pathSplit = path.split('.')
-  for (const obj of pathSplit) {
-    src = src[obj]
-    if (src === undefined) return src
+  if (path.length === 0) {
+    return src
+  } else {
+    src = src[pathSplit[0]]
+    return get(src, pathSplit.slice(1).join('.'))
   }
-  return src
 }
