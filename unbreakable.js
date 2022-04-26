@@ -1,5 +1,8 @@
 const split = (a, b = null) => {
   const ret = []
+  if (a.length === 0) {
+    ret.push('')
+  }
   while (a.length > 0) {
     const i = a.indexOf(b)
     if (i !== -1) {
