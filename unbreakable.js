@@ -27,6 +27,7 @@ const split = (a, b = null) => {
 const join = (a, b = null) => {
   let ret = ''
   for (const item of a) {
+    if (!item) continue
     if (b === null) {
       ret += (item + ', ')
     } else if (b === '') {
