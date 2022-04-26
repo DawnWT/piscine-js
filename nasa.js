@@ -10,7 +10,9 @@ const nasa = (a) => {
     }
 
     if (i % 3 !== 0 && i % 5 !== 0) ret += ((i + 1).toString())
+
+    ret += ' '
   }
 
-  return ret
+  return ret.slice(0, -1)
 }
