@@ -4,7 +4,7 @@ const indexOf = (a, b, i = 0) => {
 }
 
 const lastIndexOf = (a, b, i = 0) => {
-  for (const [j, item] of a.reverse().entries()) if (item == b && a.length - j - 1 > i) return a.length - j - 1
+  for (const [j, item] of a.reverse().entries()) if (item == b && j > i) return a.length - j - 1
   return -1
 }
 
