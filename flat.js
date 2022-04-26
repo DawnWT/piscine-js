@@ -1,5 +1,5 @@
 const flat = (a, b = 1) => {
-  if (a === 0) {
+  if (b === 0) {
     return a
   } else {
     const ret = []
