@@ -15,7 +15,7 @@ const vowelDots = (str) => {
   }
 
   const strSub = str.slice(lastIndex)
-  ret += (strSub + '.')
+  ret += strSub
 
   return ret
 }
