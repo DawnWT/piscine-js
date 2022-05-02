@@ -1,22 +1,11 @@
 const sameAmount = (a, b, c) => {
 
-  let d = a.match(b)
-  let e = a.match(c)
-  let dCount = 0
-  let eCount = 0
-  while (d !== null && e !== null) {
+  const d = new RegExp(b.source, b.flags + 'g')
+  const e = new RegExp(c.source, c.flags + 'g')
 
-    if (d) {
-      dCount += 1
-      d = a.match(b)
-    }
-    if (e) {
+  const f = a.matchAll(d)
+  const g = a.matchAll(e)
 
-      eCount += 1
-      e = a.match(c)
-    }
-  }
-
-  if (d.length === e.length) return true
+  if (f.length === g.length) return true
   return false
 }
