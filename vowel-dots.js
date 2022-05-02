@@ -5,7 +5,7 @@ const vowelDots = (str) => {
 
   const res = str.matchAll(vowels)
 
-  const lastIndex = 0
+  let lastIndex = 0
 
   for (const a of res) {
     const strSub = str.slice(lastIndex, a.index + 1)
@@ -13,6 +13,10 @@ const vowelDots = (str) => {
     ret += (sub + '.')
     lastIndex = a.index + 1
   }
+
+  const strSub = str.slice(lastIndex, a.index + 1)
+  const sub = strSub.substring(0, a.index + 1)
+  ret += (sub + '.')
 
   return ret
 }
