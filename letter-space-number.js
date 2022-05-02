@@ -1,4 +1,4 @@
-const check = /[a-zA-Z] [[:digit:]][^[:digit:]a-zA-Z]/g
+const check = /[a-zA-Z] [0-9][^0-9a-zA-Z]/g
 
 const letterSpaceNumber = (str) => {
   str += ' '
