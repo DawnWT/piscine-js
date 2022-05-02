@@ -6,6 +6,11 @@ const sameAmount = (a, b, c) => {
   const f = a.matchAll(d)
   const g = a.matchAll(e)
 
-  if (f.length === g.length) return true
+  let flen = 0
+  let glen = 0
+  for (const a of f) flen += 1
+  for (const a of g) glen += 1
+
+  if (flen === glen) return true
   return false
 }
