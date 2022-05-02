@@ -1,4 +1,4 @@
-const normal = new RegExp('.*hi.*', 'g')
-const begin = /^hi.*/g
-const end = /$hi.*/g
-const beginEnd = /hi/g
+const normal = new RegExp('.*hi.*', 'gi')
+const begin = /^hi.*/gi
+const end = /$hi.*/gi
+const beginEnd = /hi/gi
