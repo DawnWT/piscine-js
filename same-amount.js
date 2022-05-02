@@ -1,6 +1,6 @@
 const sameAmount = (a, b, c) => {
-  b.flags += g
-  c.flags += g
+  b.flags += 'g'
+  c.flags += 'g'
   const d = a.matchAll(b)
   const e = a.matchAll(c)
 
