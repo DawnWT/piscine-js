@@ -5,10 +5,13 @@ const vowelDots = (str) => {
 
   const res = str.matchAll(vowels)
 
+  const lastIndex = 0
+
   for (const a of res) {
-    const sub = str.substring(0, a.index + 1)
-    str = str.slice(a.index + 1)
+    const strSub = str.slice(lastIndex, a.index + 1)
+    const sub = strSub.substring(0, a.index + 1)
     ret += (sub + '.')
+    lastIndex = a.index + 1
   }
 
   return ret
