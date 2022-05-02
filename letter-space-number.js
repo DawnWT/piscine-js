@@ -6,7 +6,7 @@ const letterSpaceNumber = (str) => {
   const ret = []
 
   for (const a of res) {
-    ret.push(a[0][0], a[0][1], a[0][2])
+    ret.push(`${a[0][0]}${a[0][1]}${a[0][2]}`)
   }
 
   return ret
