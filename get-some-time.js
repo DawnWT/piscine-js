@@ -9,5 +9,5 @@ const firstDayWeek = (w, y) => {
     const a = date.getDay()
     date.setDate(date.getDate() - (a - 1))
   }
-  return `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}-${date.getMonth() < 9 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1)}-${date.getFullYear()}`
+  return `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}-${date.getMonth() < 9 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1)}-${date.getFullYear() < 10 ? '000' + date.getFullYear() : (date.getFullYear() < 100 ? '00' + date.getFullYear() : (date.getFullYear() < 1000 ? '0' + date.getFullYear() : date.getFullYear()))}`
 }
