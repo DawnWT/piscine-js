@@ -1,5 +1,5 @@
 const isValid = (date) => {
-  if (!isNaN(date.valueOf())) return true
+  if (!Number.isNaN(date.valueOf())) return true
   return false
 }
 
