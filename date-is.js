@@ -14,7 +14,11 @@ const isAfter = (date, date2) => {
   return false
 }
 
-const isBefore = (date, date2) => !isAfter(date, date2)
+const isBefore = (date, date2) => {
+  if (!isValid(date) || !isValid(date2)) return false
+
+  return !isAfter(date, date2)
+}
 
 const isFuture = (date) => {
   if (!isValid(date)) return false
@@ -24,4 +28,8 @@ const isFuture = (date) => {
   return false
 }
 
-const isPast = (date) => !isFuture(date)
+const isPast = (date) => {
+  if (!isValid(date)) return false
+
+  return !isFuture(date)
+}
