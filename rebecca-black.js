@@ -16,8 +16,8 @@ const isLeapYear = (date) => {
 
 const isLastDayOfMonth = (date) => {
   date.setDate(day + 1)
-  const day = date.getDate()
+  const dayy = date.getDate()
 
-  if (date.getDate() === 1) return true
+  if (dayy === 1) return true
   return false
 }
