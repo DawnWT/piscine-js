@@ -33,5 +33,5 @@ const matchCron = (cron, date) => {
 }
 
 const cronProp = (cron, id) => {
-  return cron[id] === '*' ? null : cron[id]
+  return cron[id] === '*' ? null : Number(cron[id])
 }
