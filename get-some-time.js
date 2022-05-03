@@ -1,5 +1,5 @@
 const firstDayWeek = (w, y) => {
-  const dateY = newDate(y)
+  const dateY = new Date(y)
   const valY = dateY.valueOf()
 
   const valW = valY + (w * 7 * 24 * 60 * 60 * 1000)
