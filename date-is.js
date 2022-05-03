@@ -1,4 +1,5 @@
 const isValid = (date) => {
+  if (typeof date === 'number') date = new Date(date)
   if (date instanceof Date && date.valueOf()) return true
   return false
 }
