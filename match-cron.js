@@ -22,7 +22,7 @@ const matchCron = (cron, date) => {
   }
 
   if (obj.month) {
-    if (date.getMonth() !== obj.month) return false
+    if (date.getMonth() + 1 !== obj.month) return false
   }
 
   if (obj.dayW) {
