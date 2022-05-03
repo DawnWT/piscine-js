@@ -1,5 +1,5 @@
 const isValid = (date) => {
-  if (date) return true
+  if (!isNaN(date.valueOf())) return true
   return false
 }
 
@@ -15,7 +15,7 @@ const isBefore = (date, date2) => !isAfter(date, date2)
 
 const isFuture = (date) => {
   if (!isValid(date)) return false
-  const dateN = new Date().now()
+  const dateN = Date().now()
 
   if (date.valueOf() > dateN) return true
   return false
