@@ -1,6 +1,5 @@
 const isValid = (date) => {
-  const test = new Date(date)
-  if (test.valueOf()) return true
+  if (date instanceof Date && date.valueOf()) return true
   return false
 }
 
