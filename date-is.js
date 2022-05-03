@@ -5,6 +5,8 @@ const isValid = (date) => {
 }
 
 const isAfter = (date, date2) => {
+  if (!isValid(date) || !isValid(date2)) return false
+
   const val = date.valueOf()
   const val2 = date2.valueOf()
 
