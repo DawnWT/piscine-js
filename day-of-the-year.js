@@ -4,5 +4,5 @@ const dayOfTheYear = (date) => {
 
   const mili = date.valueOf() - dayY.valueOf()
 
-  return Math.floor(mili / 1000 / 60 / 60 / 24)
+  return Math.floor(mili / 1000 / 60 / 60 / 24) + 1
 }
