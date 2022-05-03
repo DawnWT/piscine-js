@@ -22,7 +22,7 @@ const isBefore = (date, date2) => {
 
 const isFuture = (date) => {
   if (!isValid(date)) return false
-  const dateN = new Date().now()
+  const dateN = Date.now()
 
   if (date.valueOf() > dateN) return true
   return false
