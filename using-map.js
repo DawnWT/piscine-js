@@ -10,7 +10,7 @@ const fahrenheitToCelsius = (arr) => arr.map(v => {
   return `${res}°C`
 })
 
-const trimTemp = (arr) => arr.map(v => v.temperature.trim())
+const trimTemp = (arr) => arr.map(v => ({ ...v, temperature: v.temperature.trim() }))
 
 const tempForecasts = (arr) => arr.map(v => {
   const nbTemp = Number(v.temperature.trim().slice(0, -2))
