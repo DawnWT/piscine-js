@@ -15,5 +15,7 @@ const trimTemp = (arr) => arr.map(v => ({ ...v, temperature: v.temperature.repla
 const tempForecasts = (arr) => arr.map(v => {
   const nbTemp = Number(v.temperature.replace(/ /g, '').slice(0, -2))
 
-  return `${nbTemp}°Celsius in ${v.city}, ${v.state[0].toUpperCase() + v.state.substring(1)}`
+  const resTemp = Math.floor((nbTemp - 32) * 5 / 9)
+
+  return `${resTemp}°Celsius in ${v.city}, ${v.state[0].toUpperCase() + v.state.substring(1)}`
 })
