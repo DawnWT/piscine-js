@@ -13,7 +13,7 @@ const fahrenheitToCelsius = (arr) => arr.map(v => {
 const trimTemp = (arr) => arr.map(v => ({ ...v, temperature: v.temperature.replace(/ /g, '') }))
 
 const tempForecasts = (arr) => arr.map(v => {
-  const nbTemp = Number(v.temperature.trim().slice(0, -2))
+  const nbTemp = Number(v.temperature.replace(/ /g, '').slice(0, -2))
 
   return `${nbTemp}°Celsius in ${v.city}, ${v.state[0].toUpperCase() + v.state.substring(1)}`
 })
