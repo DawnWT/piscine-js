@@ -2,7 +2,7 @@ const citiesOnly = (arr) => arr.map(v => v.city)
 
 const upperCasingStates = (arr) => arr.map(v => v.split(' ').map(w => w[0].toUpperCase() + w.substring(1)).join(' '))
 
-const fahrenheitToCelsuis = (arr) => arr.map(v => {
+const fahrenheitToCelsius = (arr) => arr.map(v => {
   const nb = Number(v.slice(0, -2))
 
   return (nb - 32) * 5 / 9
