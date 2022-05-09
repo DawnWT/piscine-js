@@ -5,7 +5,8 @@ const filterStartVowel = (arr) => arr.filter(w => w.match(/^[aeiou]/gi))
 const filter5Vowels = (arr) => arr.filter(w => w.match(/(.*[aeiou].*){5,}/gi))
 
 const filter1DistinctVowel = (arr) => arr.filter(w => {
-  const vowels = 'aeiouAEIOU'
+  const vowels = 'aeiou'
+  w = w.toLowerCase()
   let wordVowel = ''
   // let keep = true
   for (const char of w) {
