@@ -17,5 +17,6 @@ const tempForecasts = (arr) => arr.map(v => {
 
   const resTemp = Math.floor((nbTemp - 32) * 5 / 9)
 
-  return `${resTemp}°Celsius in ${v.city}, ${v.state[0].toUpperCase() + v.state.substring(1)}`
+  return `${resTemp}°Celsius in ${v.city}, ${v.state.split(' ').map(w => w[0].toUpperCase() + w.substring(1)).join(' ')
+    }`
 })
