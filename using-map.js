@@ -5,7 +5,7 @@ const upperCasingStates = (arr) => arr.map(v => v.split(' ').map(w => w[0].toUpp
 const fahrenheitToCelsius = (arr) => arr.map(v => {
   const nb = Number(v.slice(0, -2))
 
-  const res = (nb - 32) * 5 / 9
+  const res = Math.floor((nb - 32) * 5 / 9)
 
   return `${res}°C`
 })
