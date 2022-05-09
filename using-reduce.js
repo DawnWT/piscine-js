@@ -1,5 +1,5 @@
-const adder = (arr) => arr.reduce((acc, curr) => acc + curr)
+const adder = (arr, start = 0) => arr.reduce((acc, curr) => acc + curr, start)
 
-const sumOrMul = (arr) => arr.reduce((acc, curr) => curr % 2 === 0 ? acc * curr : acc + curr)
+const sumOrMul = (arr, start = 0) => arr.reduce((acc, curr) => curr % 2 === 0 ? acc * curr : acc + curr, start)
 
 const funcExec = (arr) => arr.reduce((acc, curr) => curr())
