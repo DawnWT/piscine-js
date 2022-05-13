@@ -1,5 +1,5 @@
 const fold = (arr, func, acc) => {
-  for (const [i, item] of arr.entries()) acc = func(acc, item)
+  for (const item of arr) acc = func(acc, item)
   return acc
 }
 
