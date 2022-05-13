@@ -1,5 +1,5 @@
 const fold = (arr, func, acc) => {
-  for (const [i, item] of arr.entries()) acc = func(acc, item, i, arr)
+  for (const [i, item] of arr.entries()) acc = func(acc, item)
   return acc
 }
 
@@ -11,7 +11,7 @@ const reduce = (arr, func) => {
   if (arr.length < 1) throw new Error()
   const acc = arr[0]
 
-  for (let i = 1; i < arr.length; i++) acc = func(acc, item, i, arr)
+  for (let i = 1; i < arr.length; i++) acc = func(acc, item)
 
   return acc
 }
