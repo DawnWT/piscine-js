@@ -16,7 +16,7 @@ export const build = (n) => {
 
 export const repair = (...ids) => {
   for (const id of ids) {
-    const brick = document.querySelector(`#brick-${id}`)
+    const brick = document.querySelector(id)
     brick.setAttribute('repaired', id % 3 === 2 ? 'in progress' : true)
   }
 }
