@@ -147,7 +147,7 @@ export const generateClasses = () => {
   styleTag.innerHTML = ''
 
   for (const color of colors) {
-    styleTag.innerHTML += `.${color} {\n background-color: ${color};\n}\n`
+    styleTag.innerHTML += `.${color} {\n background: ${color};\n}\n`
   }
 
   document.head.append(styleTag)
