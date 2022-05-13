@@ -19,7 +19,7 @@ const truePick = (e) => {
   const hslStr = `hsl(${Math.round(xPer * 3.6)}, 50%, ${yPer}%)`
 
   hslToCopy = hslStr
-  document.body.style.backgroundColor = hslStr
+  document.body.style.background = hslStr
   hslDiv.textContent = hslStr
   hueDiv.textContent = (Math.round(xPer * 3.6)).toString()
   lumiDiv.textContent = yPer.toString()
