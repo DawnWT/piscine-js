@@ -89,4 +89,5 @@ export const grid = () => {
   for (const gossip of gossips) {
     renderGossip(gossip)
   }
+  gossips.unshift('Share gossip!')
 }
