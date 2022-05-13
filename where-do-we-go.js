@@ -134,6 +134,7 @@ export const explore = () => {
   const sorted = sortPlaces()
   console.log(sorted);
   const indicator = document.createElement('a')
+  indicator.classList.add('location')
   indicator.target = 'blank'
   // indicator.textContent = `${place.name}\n${place.coordinates}`
   // indicator.style.color = place.color
