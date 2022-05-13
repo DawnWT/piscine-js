@@ -1,6 +1,6 @@
 export const generateLetters = () => {
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-  const fSize = 10
+  let fSize = 10
   for (let i = 0; i < 120; i++) {
     const div = document.createElement('div')
     const randomLetter = letters[Math.floor(Math.random() * letters.length)]
