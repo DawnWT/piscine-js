@@ -146,9 +146,9 @@ export const explore = () => {
 
   document.addEventListener('scroll', e => {
     if (window.scrollY > lkp) {
-      direction.textContent = 'N'
-    } else {
       direction.textContent = 'S'
+    } else {
+      direction.textContent = 'N'
     }
     lkp = window.scrollY
 
