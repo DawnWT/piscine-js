@@ -4,7 +4,7 @@ const fold = (arr, func, acc = 0) => {
 }
 
 const foldRight = (arr, func, acc = 0) => {
-  return fold(arr.reverse(), func, acc || 0)
+  return fold(arr.reverse(), func, acc)
 }
 
 const reduce = (arr, func) => {
