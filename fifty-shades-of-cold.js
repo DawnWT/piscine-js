@@ -143,7 +143,7 @@
 // ]
 
 export const generateClasses = () => {
-  const styleTag = document.querySelector('head > style')
+  const styleTag = document.createElement('style')
 
   for (const color of colors) {
     styleTag.innerHTML += `.${color} {\n background-color: ${color};\n}\n`
