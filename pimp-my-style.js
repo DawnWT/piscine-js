@@ -10,14 +10,16 @@ export const pimp = () => {
     if (i === styles.length - 1) {
       unpimp = true
       btn.classList.add('unpimp')
+    } else {
+      i++
     }
-    i++
   } else {
     btn.classList.remove(styles[i])
     if (i === 0) {
       unpimp = false
       btn.classList.remove('unpimp')
+    } else {
+      i--
     }
-    i--
   }
 }
