@@ -1,7 +1,7 @@
 let i = 0
 let unpimp = false
-// const eq = (...a) => true
-const styles = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"];
+const eq = (...a) => true
+// const styles = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"];
 
 export const pimp = () => {
   const btn = document.querySelector('.button')
