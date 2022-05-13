@@ -77,14 +77,12 @@ export const grid = () => {
 
   const gossipForm = document.createElement('form')
   gossipForm.classList.add('gossip')
-  // gossipForm.textContent = 'Share gossip!'
 
   const formTA = document.createElement('textarea')
   formTA.value = 'Share gossip!'
 
   const formSubmit = document.createElement('button')
   formSubmit.type = 'submit'
-  formSubmit.textContent = 'Share gossip!'
 
   gossipForm.append(formTA, formSubmit)
 
