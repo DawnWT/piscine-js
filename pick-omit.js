@@ -12,3 +12,7 @@ const pick = (obj, str) => {
   }
   return newObj;
 }
+
+const omit = (obj, str) => {
+  return !pick(obj, str)
+}
