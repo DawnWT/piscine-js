@@ -121,12 +121,18 @@ const sortPlaces = () => {
 
     if (aCo[3] === 'S' && Number(aCo[0]) < Number(bCo[0])) return -1
     if (aCo[3] === 'S' && Number(aCo[0]) > Number(bCo[0])) return 1
+
+    if (aCo[3] === 'N' && Number(aCo[1]) > Number(bCo[1])) return -1
+    if (aCo[3] === 'N' && Number(aCo[1]) < Number(bCo[1])) return 1
+
+    if (aCo[3] === 'S' && Number(aCo[1]) < Number(bCo[1])) return -1
+    if (aCo[3] === 'S' && Number(aCo[1]) > Number(bCo[1])) return 1
   })
 }
 
 export const explore = () => {
   const sorted = sortPlaces()
-  // console.log(sorted);
+  console.log(sorted);
   const indicator = document.createElement('a')
   indicator.target = 'blank'
   // indicator.textContent = `${place.name}\n${place.coordinates}`
