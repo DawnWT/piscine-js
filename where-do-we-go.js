@@ -155,5 +155,7 @@ export const explore = () => {
   for (const place of sorted) {
     const section = document.createElement('section')
     section.style.background = `url('./where-do-we-go/${place.name}.jpg')`
+
+    document.body.append(section)
   }
 }
