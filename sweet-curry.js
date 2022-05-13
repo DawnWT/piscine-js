@@ -1,3 +1,3 @@
-const mult2 = (a) => () => a * 2
-const add3 = (a) => () => a + 3
-const sub4 = (a) => () => a - 4
+const mult2 = (a) => (b) => a * b
+const add3 = (a) => (b) => (c) => a + b + c
+const sub4 = (a) => (b) => (c) => (d) => a - b - c - d
