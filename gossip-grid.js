@@ -18,16 +18,27 @@ const gossips = [
   `Kim Kardashian 'considers leaving home' with Kanye West to 'save marriage'`,
 ]
 
-const renderGossip = (gossip) => {
-  const div = document.createElement('div')
-  div.classList.add('gossip')
-  div.textContent = gossip
+const renderGossips = () => {
+  const oldGossips = document.querySelectorAll('div.gossip')
 
-  document.body.append(div)
+  for (const oldG of oldGossips) oldG.remove()
+
+  for (const [i, gossip] of gossips.entries()) {
+    const div = document.createElement('div')
+    div.classList.add('gossip')
+    if (i === 0) div.classList.add('fade-in')
+    div.textContent = gossip
+
+    document.body.append(div)
+  }
 }
 
 export const grid = () => {
-  const style = document.querySelector('style')
+  const styleW = document.createElement('style')
+  const styleFS = document.createElement('style')
+  const styleBG = document.createElement('style')
+
+  document.head.append(styleW, styleFS, styleBG)
 
   const rangesDiv = document.createElement('div')
   rangesDiv.classList.add('ranges')
@@ -39,7 +50,7 @@ export const grid = () => {
   rangeW.max = '800'
 
   rangeW.addEventListener('input', (e) => {
-    style.innerHTML += `\n.gossip { width: ${e.target.value}px; }\n`
+    styleW.innerHTML = `.gossip { width: ${e.target.value}px; }`
   })
 
   const rangeFS = document.createElement('input')
@@ -49,7 +60,7 @@ export const grid = () => {
   rangeFS.max = '40'
 
   rangeFS.addEventListener('input', (e) => {
-    style.innerHTML += `\n.gossip { font-size: ${e.target.value}px; }\n`
+    styleFS.innerHTML = `.gossip { font-size: ${e.target.value}px; }`
   })
 
   const rangeBG = document.createElement('input')
@@ -59,7 +70,7 @@ export const grid = () => {
   rangeBG.max = '75'
 
   rangeBG.addEventListener('input', (e) => {
-    style.innerHTML += `\n.gossip { background: hsl(280, 50%, ${e.target.value}%); }\n`
+    styleBG.innerHTML = `.gossip { background: hsl(280, 50%, ${e.target.value}%); }`
   })
 
   rangesDiv.append(rangeW, rangeFS, rangeBG)
@@ -80,14 +91,12 @@ export const grid = () => {
   gossipForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const newGossip = e.target.children[0].value
-    gossips.push(newGossip)
+    gossips.unshift(newGossip)
     e.target.children[0].value = ''
-    renderGossip(newGossip)
+    renderGossips()
   })
 
   document.body.append(rangesDiv, gossipForm)
 
-  for (const gossip of gossips) {
-    renderGossip(gossip)
-  }
+  renderGossips()
 }
