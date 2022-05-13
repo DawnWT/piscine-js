@@ -21,7 +21,7 @@ const omit = (obj, str) => {
       continue
     }
 
-    if (typeof str === 'string' && !key === str) {
+    if (typeof str === 'string' && key !== str) {
       newObj[key] = val
     }
   }
