@@ -1,4 +1,4 @@
-const build = (n) => {
+export const build = (n) => {
   let i = 0
   const interval = setInterval(() => {
     const brick = document.createElement('div')
@@ -14,14 +14,14 @@ const build = (n) => {
   }, 100)
 }
 
-const repair = (...ids) => {
+export const repair = (...ids) => {
   for (const id of ids) {
     const brick = document.querySelector(`#brick-${id}`)
     brick.setAttribute('repaired', id % 3 === 2 ? 'in progress' : true)
   }
 }
 
-const destroy = () => {
+export const destroy = () => {
   const lastBrick = document.querySelector('div:last-child')
 
   lastBrick.remove()
