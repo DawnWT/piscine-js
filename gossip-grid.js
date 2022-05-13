@@ -65,7 +65,7 @@ export const grid = () => {
   rangeFS.addEventListener('input', (e) => {
     // styleFS.innerHTML = `.gossip { font-size: ${e.target.value}px; }`
     const gos = document.querySelectorAll('div.gossip')
-    for (const g of gos) g.style.width = `font-size: ${e.target.value}px`
+    for (const g of gos) g.style.fontSize = `font-size: ${e.target.value}px`
   })
 
   const rangeBG = document.createElement('input')
@@ -77,7 +77,7 @@ export const grid = () => {
   rangeBG.addEventListener('input', (e) => {
     // styleBG.innerHTML = `.gossip { background: hsl(280, 50%, ${e.target.value}%); }`
     const gos = document.querySelectorAll('div.gossip')
-    for (const g of gos) g.style.width = `background: hsl(280, 50%, ${e.target.value}%)`
+    for (const g of gos) g.style.background = `background: hsl(280, 50%, ${e.target.value}%)`
   })
 
   rangesDiv.append(rangeW, rangeFS, rangeBG)
