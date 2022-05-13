@@ -68,7 +68,7 @@ export const grid = () => {
   gossipForm.classList.add('gossip')
 
   const formTA = document.createElement('textarea')
-  formTA.placeholder = 'Got a gossip to share ?'
+  formTA.value = 'Share gossip!'
 
   const formSubmit = document.createElement('input')
   formSubmit.type = 'submit'
