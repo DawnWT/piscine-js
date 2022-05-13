@@ -62,5 +62,5 @@ export const pick = () => {
   document.body.append(svg)
 
   document.addEventListener('mousemove', truePick)
-  document.AddEventListener('click', () => navigator.clipboard.writeText(hslToCopy))
+  document.addEventListener('click', () => navigator.clipboard.writeText(hslToCopy))
 }
