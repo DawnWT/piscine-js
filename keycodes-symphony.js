@@ -19,10 +19,11 @@ const trueCompose = (e) => {
 
   const div = document.createElement('div')
   div.classList.add('note')
+  div.textContent = e.key
 
   document.body.append(div)
 }
 
 export const compose = () => {
-  document.addEventListener('keypress', trueCompose)
+  document.addEventListener('keydown', trueCompose)
 }
