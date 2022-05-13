@@ -19,7 +19,7 @@ const reduce = (arr, func) => {
   if (arr.length < 1) throw new Error()
   const acc = arr[0]
 
-  for (let i = 1; i < arr.length; i++) acc = func(acc, item)
+  for (let i = 1; i < arr.length; i++) acc = func(acc, arr[i])
 
   return acc
 }
