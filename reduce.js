@@ -17,7 +17,7 @@ const foldRight = (arr, func, acc) => {
 
 const reduce = (arr, func) => {
   if (arr.length < 1) throw new Error()
-  const acc = arr[0]
+  let acc = arr[0]
 
   for (let i = 1; i < arr.length; i++) acc = func(acc, arr[i])
 
