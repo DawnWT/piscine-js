@@ -113,20 +113,20 @@ const sortPlaces = () => {
     const aCo = a.coordinates.split(' ')[0].split(/[°'"]/)
     const bCo = b.coordinates.split(' ')[0].split(/[°'"]/)
 
-    if (aCo[3] === 'N' && bCo[3] === 'S') return 1
-    if (aCo[3] === 'S' && bCo[3] === 'N') return -1
+    if (aCo[3] === 'N' && bCo[3] === 'S') return -1
+    if (aCo[3] === 'S' && bCo[3] === 'N') return 1
 
-    if (aCo[3] === 'N' && Number(aCo[0]) > Number(bCo[0])) return 1
-    if (aCo[3] === 'N' && Number(aCo[0]) < Number(bCo[0])) return -1
+    if (aCo[3] === 'N' && Number(aCo[0]) > Number(bCo[0])) return -1
+    if (aCo[3] === 'N' && Number(aCo[0]) < Number(bCo[0])) return 1
 
-    if (aCo[3] === 'S' && Number(aCo[0]) < Number(bCo[0])) return 1
-    if (aCo[3] === 'S' && Number(aCo[0]) > Number(bCo[0])) return -1
+    if (aCo[3] === 'S' && Number(aCo[0]) < Number(bCo[0])) return -1
+    if (aCo[3] === 'S' && Number(aCo[0]) > Number(bCo[0])) return 1
   })
 }
 
 export const explore = () => {
   const sorted = sortPlaces()
-
+  // console.log(sorted);
   const indicator = document.createElement('a')
   indicator.target = 'blank'
   // indicator.textContent = `${place.name}\n${place.coordinates}`
