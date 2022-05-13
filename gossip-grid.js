@@ -34,11 +34,12 @@ const renderGossips = () => {
 }
 
 export const grid = () => {
-  const styleW = document.createElement('style')
-  const styleFS = document.createElement('style')
-  const styleBG = document.createElement('style')
+  // const styleW = document.createElement('style')
+  // const styleFS = document.createElement('style')
+  // const styleBG = document.createElement('style')
 
-  document.head.append(styleW, styleFS, styleBG)
+  // document.head.append(styleW, styleFS, styleBG)
+  // nsm la facon dont ait obligé de faire est deguelasse
 
   const rangesDiv = document.createElement('div')
   rangesDiv.classList.add('ranges')
@@ -50,7 +51,9 @@ export const grid = () => {
   rangeW.max = '800'
 
   rangeW.addEventListener('input', (e) => {
-    styleW.innerHTML = `.gossip { width: ${e.target.value}px; }`
+    // styleW.innerHTML = `.gossip { width: ${e.target.value}px; }`
+    const gos = document.querySelectorAll('div.gossip')
+    for (const g of gos) g.style.width = `${e.target.value}px`
   })
 
   const rangeFS = document.createElement('input')
@@ -60,7 +63,9 @@ export const grid = () => {
   rangeFS.max = '40'
 
   rangeFS.addEventListener('input', (e) => {
-    styleFS.innerHTML = `.gossip { font-size: ${e.target.value}px; }`
+    // styleFS.innerHTML = `.gossip { font-size: ${e.target.value}px; }`
+    const gos = document.querySelectorAll('div.gossip')
+    for (const g of gos) g.style.width = `font-size: ${e.target.value}px`
   })
 
   const rangeBG = document.createElement('input')
@@ -70,7 +75,9 @@ export const grid = () => {
   rangeBG.max = '75'
 
   rangeBG.addEventListener('input', (e) => {
-    styleBG.innerHTML = `.gossip { background: hsl(280, 50%, ${e.target.value}%); }`
+    // styleBG.innerHTML = `.gossip { background: hsl(280, 50%, ${e.target.value}%); }`
+    const gos = document.querySelectorAll('div.gossip')
+    for (const g of gos) g.style.width = `background: hsl(280, 50%, ${e.target.value}%)`
   })
 
   rangesDiv.append(rangeW, rangeFS, rangeBG)
