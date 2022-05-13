@@ -155,7 +155,7 @@ export const generateClasses = () => {
 
 export const generateColdShades = () => {
   for (const color of colors) {
-    if (!(color.contains('aqua') || color.contains('blue') || color.contains('turquoise') || color.contains('green') || color.contains('cyan') || color.contains('navy') || color.contains('purple'))) continue
+    if (!(color.includes('aqua') || color.includes('blue') || color.includes('turquoise') || color.includes('green') || color.includes('cyan') || color.includes('navy') || color.includes('purple'))) continue
     const div = document.createElement('div')
     div.classList.add(color)
     div.textContent = color
