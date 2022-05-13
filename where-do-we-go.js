@@ -142,6 +142,8 @@ export const explore = () => {
   const direction = document.createElement('div')
   direction.classList.add('direction')
 
+  document.body.appendChild(indicator, direction)
+
   document.addEventListener('scroll', e => {
     if (window.scrollY > lkp) {
       direction.textContent = 'N'
