@@ -42,5 +42,5 @@ const lowCarbs = (obj) => {
 }
 
 const cartTotal = (obj) => {
-  return mapEntries(obj, ([key, val]) => [key, mapValues(nutritionDB[key], (v) => (v * 10 * (val / 1000)))])
+  return mapEntries(obj, ([key, val]) => [key, mapValues(nutritionDB[key], (v) => Math.round((v * (val / 100)) * 100) / 100)])
 }
