@@ -1,5 +1,5 @@
 const getJSON = async (path, params) => {
-  const url = path
+  let url = path
   const entries = Object.entries(params)
   if (entries.length > 0) url += '?'
   for (const [key, value] of entries) {
