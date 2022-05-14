@@ -12,4 +12,6 @@ const pronoun = (str) => {
       if (i < splitted.length && !pronouns.includes(splitted[i + 1])) ret[word].word.push(word)
     }
   }
+
+  return ret
 }
