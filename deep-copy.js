@@ -1,14 +1,14 @@
-const deepCopy = (obj, copy = Array.isArray(obj) ? [] : {}, base = true) => {
+const deepCopy = (obj, copy = Array.isArray(obj) ? [] : {}, path = '') => {
   if (Array.isArray(obj)) {
-    for (const val of obj) {
-      copy.push(deepCopy(val, copy, false, false))
+    for (const [i, val] of obj.entries()) {
+      copy.push(deepCopy(val, copy[i], false, false))
     }
-    if (base) return copy
+    return copy
   } else if (typeof obj === 'object' && !(obj instanceof RegExp)) {
     for (const [key, val] of Object.entries(obj)) {
-      copy[key] = deepCopy(val, copy, false, false)
+      copy[key] = deepCopy(val, copy[key], false, false)
     }
-    if (base) return copy
+    return copy
   } else {
     return obj
   }
