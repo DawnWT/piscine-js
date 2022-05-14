@@ -4,8 +4,9 @@ const queryServers = async (serverName, q) => {
 
 const gougleSearch = async (q) => {
   const timeout = new Promise((res) => { setTimeout(res, 80, 'timeout') })
-  const res = await Promise.all([queryServers('web', q), queryServers('image', q), queryServers('video', q), timeout])
+  const res = await Promise.race([Promise.all([queryServers('web', q), queryServers('image', q), queryServers('video', q)]), timeout])
 
+  if (res === 'timeout') return 'timeout'
   return {
     web: res[0],
     image: res[1],
