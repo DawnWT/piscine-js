@@ -28,8 +28,7 @@ const filterCurry = (func) => (obj) => {
 }
 
 const reduceScore = (personnel, initialValue = 0) => {
-  const filtered = filterCurry(([, val]) => val.isForceUser === true)(personnel)
-  return reduceCurry((acc, [, val]) => acc + val.pilotingScore + val.shootingScore, initialValue)(filtered)
+  return reduceCurry((acc, [, val]) => val.isForceUser ? acc + val.pilotingScore + val.shootingScore : acc)(personnel, initialValue)
 }
 
 const filterForce = (personnel) => {
