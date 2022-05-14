@@ -11,7 +11,7 @@ const filterEntries = (obj, func) => {
 const mapEntries = (obj, func) => {
   const newObj = {}
   for (const [key, val] of Object.entries(obj)) {
-    [nk, nv] = func([key, val])
+    const [nk, nv] = func([key, val])
     newObj[nk] = nv
   }
   return newObj
