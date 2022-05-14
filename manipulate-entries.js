@@ -30,7 +30,7 @@ const totalCalories = (obj) => {
 }
 
 const lowCarbs = (obj) => {
-  return filterEntries(obj, ([key, val]) => nutritionDB[key].carbs < 50)
+  return filterEntries(obj, ([key, val]) => nutritionDB[key].carbs * (val / 100) < 50)
 }
 
 const cartTotal = (obj) => {
