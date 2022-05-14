@@ -26,7 +26,7 @@ const reduceEntries = (obj, func, initialValue = '') => {
 }
 
 const totalCalories = (obj) => {
-  return reduceEntries(obj, (acc, [key, val]) => acc + nutritionDB[key].calories, 0)
+  return reduceEntries(obj, (acc, [key, val]) => acc + (nutritionDB[key].calories * (val / 100)), 0)
 }
 
 const lowCarbs = (obj) => {
