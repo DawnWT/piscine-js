@@ -3,7 +3,7 @@ const getJSON = async (path, params) => {
   const entries = Object.entries(params)
   if (entries.length > 0) url += '?'
   for (const [key, value] of entries) {
-    url += `${key}=${value}&`
+    url += `${key}=${value.split(' ').join('+')}&`
   }
   const urlFetch = await fetch(url.slice(0, -1))
   const json = await urlFetch.json()
