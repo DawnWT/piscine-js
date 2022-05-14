@@ -16,7 +16,7 @@ const mapKeys = (obj, func) => {
   return newObj
 }
 
-const reduceKeys = (obj, func, initialValue = 0) => {
+const reduceKeys = (obj, func, initialValue = '') => {
   let acc = initialValue;
   for (const key of Object.keys(obj)) {
     acc = func(acc, key)
