@@ -9,7 +9,7 @@ const fusion = (...obj) => {
         retObj[key] = val
       } else {
         if (Array.isArray(val) && Array.isArray(retObj[key])) {
-          retObj[key].push(val)
+          retObj[key] = [...retObj[key], ...val]
         } else if (typeof val === 'string' && typeof retObj[key] === 'string') {
           retObj[key] = retObj[key] + " " + val
         } else if (typeof val === 'number' && typeof retObj[key] === 'number') {
