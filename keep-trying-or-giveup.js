@@ -1,9 +1,9 @@
 const retry = (count, cb) => async (...args) => {
   try {
-    return cb(...args)
+    return await cb(...args)
   }
   catch (e) {
-    if (count > 0) return retry(count - 1, cb)(...args)
+    if (count > 0) return await retry(count - 1, cb)(...args)
     else throw e
   }
 }
