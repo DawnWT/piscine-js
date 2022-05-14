@@ -9,6 +9,6 @@ const retry = (count, cb) => async (...args) => {
 }
 
 const timeout = (delay, cb) => async (...args) => {
-  const pTimeout = new Promise((res, rej) => setTimeout(res, delay, Error('timeout')))
+  const pTimeout = new Promise((res, rej) => setTimeout(res, delay, 'timeout'))
   return await Promise.race([pTimeout, cb(...args)])
 }
