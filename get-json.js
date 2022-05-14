@@ -8,6 +8,6 @@ const getJSON = async (path, params) => {
   const urlFetch = await fetch(url.slice(0, -1))
   const json = await urlFetch.json()
 
-  if (json.error) throw new Error(json.error)
-  return json.data
+  if (urlFetch.statusText === 'OK') return json.data
+  throw new Error(json.error)
 }
