@@ -21,6 +21,6 @@ const getJSON = async (path, params) => {
   const urlFetch = await fetch(url.slice(0, -1))
   const json = await urlFetch.json()
 
-  if (urlFetch.statusText === 'OK' && !json.error) return json.data
+  if (urlFetch.statusText === 'OK' && urlFetch.status === 200 && !json.error) return json.data
   throw new Error(json.error || urlFetch.statusText)
 }
