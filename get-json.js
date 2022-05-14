@@ -9,5 +9,5 @@ const getJSON = async (path, params) => {
   const json = await urlFetch.json()
 
   if (urlFetch.statusText === 'OK') return json.data
-  throw new Error(json.error)
+  throw new Error(json.error || urlFetch.statusText)
 }
