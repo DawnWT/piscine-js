@@ -2,7 +2,7 @@ const pronouns = ['i', 'you', 'he', 'she', 'we', 'they', 'it']
 
 const pronoun = (str) => {
   const ret = {}
-  const splitted = str.toLowerCase().split(' ')
+  const splitted = str.toLowerCase().split(/[ \n,:.]/)
 
   for (const [i, word] of splitted.entries()) {
     if (pronouns.includes(word)) {
