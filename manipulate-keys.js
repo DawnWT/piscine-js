@@ -1,5 +1,5 @@
 const filterKeys = (obj, func) => {
-  const newObj = {};
+  const newObj = {}
   for (const [key, val] of Object.entries(obj)) {
     if (func(key)) {
       newObj[key] = val
@@ -9,7 +9,7 @@ const filterKeys = (obj, func) => {
 }
 
 const mapKeys = (obj, func) => {
-  const newObj = {};
+  const newObj = {}
   for (const [key, val] of Object.entries(obj)) {
     newObj[func(key)] = val
   }
@@ -17,12 +17,10 @@ const mapKeys = (obj, func) => {
 }
 
 const reduceKeys = (obj, func, initialValue = '') => {
-  let acc = initialValue;
+  const keys = Object.keys(obj)
+  let acc = initialValue || keys[0]
   for (const [i, key] of Object.keys(obj).entries()) {
-    if (i === 0) {
-      acc = key
-      continue
-    }
+    if (initialValue === '' && i === 0) continue
     acc = func(acc, key)
   }
   return acc
