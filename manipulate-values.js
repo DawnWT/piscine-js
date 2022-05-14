@@ -16,7 +16,7 @@ const mapValues = (obj, func) => {
   return newObj
 }
 
-const reduceValues = (obj, func, initialValue) => {
+const reduceValues = (obj, func, initialValue = 0) => {
   let acc = initialValue;
   for (const [key, val] of Object.entries(obj)) {
     acc = func(acc, val)
