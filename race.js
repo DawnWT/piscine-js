@@ -1,4 +1,5 @@
 const race = async (arr) => {
+  if (arr.length === 0) return new Promise()
   const ret = []
   for (const func of arr) func.then(val => ret.push(val))
 
