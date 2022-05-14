@@ -18,7 +18,11 @@ const mapKeys = (obj, func) => {
 
 const reduceKeys = (obj, func, initialValue = '') => {
   let acc = initialValue;
-  for (const key of Object.keys(obj)) {
+  for (const [i, key] of Object.keys(obj).entries()) {
+    if (i === 0) {
+      acc = key
+      continue
+    }
     acc = func(acc, key)
   }
   return acc
