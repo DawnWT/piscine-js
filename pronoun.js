@@ -1,4 +1,4 @@
-const pronouns = ['i', 'you', 'he', 'she', 'we', 'they']
+const pronouns = ['i', 'you', 'he', 'she', 'we', 'they', 'it']
 
 const pronoun = (str) => {
   const ret = {}
