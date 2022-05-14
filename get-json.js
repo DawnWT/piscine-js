@@ -1,15 +1,15 @@
-const fakeFetch = async ({ data, error, ...opts } = {}) => ({
-  ok: !opts.status,
-  type: 'basic',
-  status: 200,
-  statusText: 'OK',
-  json: async () => ({ data, error }),
-  text: async () => JSON.stringify({ data, error }),
-  ...opts,
-})
+// const fakeFetch = async ({ data, error, ...opts } = {}) => ({
+//   ok: !opts.status,
+//   type: 'basic',
+//   status: 200,
+//   statusText: 'OK',
+//   json: async () => ({ data, error }),
+//   text: async () => JSON.stringify({ data, error }),
+//   ...opts,
+// })
 
-const error = `oops: ${Math.random()}`
-fetch = (url) => fakeFetch({ url, error })
+// const error = `oops: ${Math.random()}`
+// fetch = (url) => fakeFetch({ url, error })
 
 const getJSON = async (path, params) => {
   let url = path
