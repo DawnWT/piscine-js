@@ -9,7 +9,7 @@ const pronoun = (str) => {
       if (ret[word] === undefined) ret[word] = { word: [], count: 0 }
 
       ret[word].count += 1
-      if (i < splitted.length && !pronouns.includes(splitted[i + 1])) ret[word].word.push(word)
+      if (i < splitted.length && !pronouns.includes(splitted[i + 1])) ret[word].word.push(splitted[i + 1])
     }
   }
 
