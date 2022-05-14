@@ -1,25 +1,25 @@
-const filterValues = (obj, func) => {
+const filterKeys = (obj, func) => {
   const newObj = {};
   for (const [key, val] of Object.entries(obj)) {
-    if (func(val)) {
+    if (func(key)) {
       newObj[key] = val
     }
   }
   return newObj
 }
 
-const mapValues = (obj, func) => {
+const mapKeys = (obj, func) => {
   const newObj = {};
   for (const [key, val] of Object.entries(obj)) {
-    newObj[key] = func(val)
+    newObj[func(key)] = val
   }
   return newObj
 }
 
-const reduceValues = (obj, func, initialValue = 0) => {
+const reduceKeys = (obj, func, initialValue = 0) => {
   let acc = initialValue;
-  for (const val of Object.values(obj)) {
-    acc = func(acc, val)
+  for (const key of Object.keys(obj)) {
+    acc = func(acc, key)
   }
   return acc
 }
