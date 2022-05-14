@@ -25,6 +25,14 @@ const reduceEntries = (obj, func, initialValue = '') => {
   return acc
 }
 
+const mapValues = (obj, func) => {
+  const newObj = {}
+  for (const [key, val] of Object.entries(obj)) {
+    newObj[key] = func(val)
+  }
+  return newObj
+}
+
 const totalCalories = (obj) => {
   return reduceEntries(obj, (acc, [key, val]) => acc + (nutritionDB[key].calories * (val / 100)), 0)
 }
@@ -34,5 +42,5 @@ const lowCarbs = (obj) => {
 }
 
 const cartTotal = (obj) => {
-  return mapEntries(obj, ([key, val]) => nutritionDB[key])
+  return mapEntries(obj, ([key, val]) => mapValues(nutritionDB[key], v => v * (val / 100)))
 }
