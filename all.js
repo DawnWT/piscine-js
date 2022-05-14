@@ -3,7 +3,7 @@ const all = async (arr) => {
   if (typeof arr === 'object' && !Array.isArray(arr)) {
     const retObj = {}
     for (const [key, val] of Object.entries(arr)) {
-      ret[key] = await val
+      retObj[key] = await val
     }
     return retObj
   }
