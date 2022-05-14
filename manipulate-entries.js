@@ -34,7 +34,7 @@ const mapValues = (obj, func) => {
 }
 
 const totalCalories = (obj) => {
-  return reduceEntries(obj, (acc, [key, val]) => acc + (nutritionDB[key].calories * (val / 100)), 0)
+  return reduceEntries(obj, (acc, [key, val]) => Math.round((acc + (nutritionDB[key].calories * (val / 100))) * 10) / 10, 0)
 }
 
 const lowCarbs = (obj) => {
