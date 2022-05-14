@@ -1,3 +1,4 @@
 const deepCopy = (obj) => {
-  return structuredClone(obj)
+  if (Array.isArray(obj)) return obj.slice()
+  return Object.Assign({}, obj)
 }
