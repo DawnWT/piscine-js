@@ -5,6 +5,7 @@ const recuReplica = (obj1, obj2) => {
   for (const [key, val] of Object.entries(obj2)) {
     obj1[key] = recuReplica(obj1[key], val)
   }
+  return obj1
 }
 
 const replica = (initialObj, ...objs) => {
